@@ -1,0 +1,33 @@
+#result{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.image{
+    border-radius: 50%
+}
+
+#characterBox{
+    border: white solid 1px;
+    margin: 5px;
+    padding: 20px;
+    padding-right: 35px;
+    padding-left: 35px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#characterBox:hover{
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: 5px, 10px;
+}
+
+body{
+    background-image: url('/assets/one.jpg');
+    background-position: center;
+}
+#control{
+    margin: 5px;
+}
