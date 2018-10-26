@@ -7,7 +7,7 @@
     border-radius: 50%
 }
 
-#characterBox{
+.characterBox{
     border: black solid 1px;
     margin: 5px;
     padding: 20px;
@@ -19,7 +19,7 @@
     background-color: rgba(255,255,255,0.5);
 }
 
-#characterBox:hover{
+.characterBox:hover{
     background-color: rgba(255,255,255,0.7);
     box-shadow: 5px, 10px;
 }

@@ -1,7 +1,7 @@
 const resultDiv = document.querySelector('#result');
 const previous = document.querySelector('#previous');
 const next = document.querySelector('#next');
-// const characterBox = querySelector("#characterBox");
+
 let pageNumber = 1;
 
 previous.addEventListener('click', function(){
@@ -13,7 +13,7 @@ previous.addEventListener('click', function(){
             resultDiv.innerHTML = response.data.results.map(function(val) {
                 return `
                 <br>
-                <div id = "characterBox">
+                <div class = "characterBox">
                     <div class="name">${val.name}</div>
                     <img class="image"src='${val.image}' width="100px" height="auto">
                     <div class="species">${val.species}</div>
@@ -40,7 +40,7 @@ next.addEventListener('click', function(){
         resultDiv.innerHTML = response.data.results.map(function(val) {
             return `
             <br>
-            <div id = "characterBox">
+            <div class = "characterBox">
                 <div class="name">${val.name}</div>
                 <img class="image"src='${val.image}' width="100px" height="auto">
                 <div class="species">${val.species}</div>
@@ -64,13 +64,15 @@ console.log('pageNumber', pageNumber);
 
 
 
+
+
 axios.get('https://rickandmortyapi.com/api/character/?page=1')
     .then(function(response){
         console.log('*****ALL_DATA******', response.data.results);
         resultDiv.innerHTML = response.data.results.map(function(val) {
             return `
             <br>
-            <div id = "characterBox">
+            <div class = "characterBox">
                 <div class="name">${val.name}</div>
                 <img class="image"src='${val.image}' width="100px" height="auto">
                 <div class="species">${val.species}</div>
@@ -79,6 +81,8 @@ axios.get('https://rickandmortyapi.com/api/character/?page=1')
             </div>
             <br>
             `
+            var webName = val.name;
+            return webName;
         }).join(' ');
 
     })
@@ -86,6 +90,14 @@ axios.get('https://rickandmortyapi.com/api/character/?page=1')
         console.log('err', err);
     })
 
-    characterBox.addEventListener("click", ()=>{
-        console.log(yeet);
-    })
+    window.onload = function() {
+    const characterBox = document.querySelectorAll(".characterBox");
+ 
+    
+    for(var i = 0; i < characterBox.length; i++){
+     
+        characterBox[i].addEventListener("click", ()=>{
+            window.location("http://rickandmorty.wikia.com/wiki/" + webName);
+        })
+    }
+};
