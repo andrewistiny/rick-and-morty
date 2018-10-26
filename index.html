@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rick and Morty</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -15,8 +15,16 @@
         <button id="previous"> PREVIOUS PAGE </button>
         <button id="next"> NEXT PAGE </button>
         <form action="">
-            <input type="dropdown">
+            <select name="Filters" id="filter-container">
+                    <option id="filters">Select Filter</option>
+                    <option id="filters">Name</option>
+                    <option id="filters">Species</option>
+                    <option id="filters">Dimension</option>
+                    <option id="filters">Living</option>
+                    <option id="filters">Dead</option>
+            </select>
             <input type="text">
+            <input type="button" value="Search">
         </form>
     </div>
     <div id="result"></div>

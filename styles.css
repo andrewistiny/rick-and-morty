@@ -8,7 +8,7 @@
 }
 
 #characterBox{
-    border: white solid 1px;
+    border: black solid 1px;
     margin: 5px;
     padding: 20px;
     padding-right: 35px;
@@ -28,6 +28,13 @@ body{
     background-image: url('/assets/one.jpg');
     background-position: center;
 }
-#control{
-    margin: 5px;
+
+@font-face {
+    font-family: 'MISFITS_';
+    src:    url('assets/MISFITS_.TTF') format('truetype');
+}
+
+.name{
+    font-family: 'MISFITS_';
+    font-size: 25px;
 }

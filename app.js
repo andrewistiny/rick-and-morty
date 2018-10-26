@@ -1,18 +1,7 @@
-//                                                                                       
-//      /----\   /----\  /----------\  /----------\  /----\  /---/      /----------\  /-----\     /-----\                                                            
-//      |    |   |    |  |    /-----/  |          |  |    | /   /       |    /-----/  |      \   /      |                                        
-//      |    |   |    |  |    |        |    /-----/  |    |/   /        |    |        |       \-/       |                                       
-//      |    \---/    |  |    \-----\  |    |        |    /   /         |    \-----\  |     \     /|    |                                         
-//      |             |  |          |  |    |        |        |         |          |  |     |\---/ |    |                                  
-//      |    /---\    |  |    /-----/  |    |        |    \   \         |    /-----/  |     |      |    |                                          
-//      |    |   |    |  |    |        |    \-----\  |    |\   \        |    |        |     |      |    |                                         
-//      |    |   |    |  |    \-----\  |          |  |    | \   \       |    \-----\  |     |      |    |                                       
-//      \----/   \----/  \----------/  \----------/  \----/  \---\      \----------/  \-----/      \----/                                                            
-//                                                                                       
-//                                                                                       
 const resultDiv = document.querySelector('#result');
 const previous = document.querySelector('#previous');
 const next = document.querySelector('#next');
+// const characterBox = querySelector("#characterBox");
 let pageNumber = 1;
 
 previous.addEventListener('click', function(){
@@ -97,6 +86,6 @@ axios.get('https://rickandmortyapi.com/api/character/?page=1')
         console.log('err', err);
     })
 
-    
-
-      
+    characterBox.addEventListener("click", ()=>{
+        console.log(yeet);
+    })
